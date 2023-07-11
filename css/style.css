@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    ---primary: #030c44;
+    ---dark: #130f10;
+    ---body: #888;
+    ---box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1)
+}
+
+body {
+    font-family: sora, 'san-serif';
+    line-height: 1.7;
+    color: var(---body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(---dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(---dark);
+    text-decoration: none;
+}
+/*-----Loader------*/
+.loader{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(11, 3, 51, 10);
+    transition: opacity 0.75s, visibility 0.75s;
+}
+.loader--hidden{
+ opacity: 0;
+ visibility: hidden; 
+ transition: opacity 0.75s, visibility 0.75s;  
+}
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 10px solid #ffffff;
+    border-top: 30px solid  #d100ff;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+ @keyframes loading {
+    from { transform: rotate(0turn)}
+    to { transform: rotate(1turn)}
+ }
+/*-----narbar------*/
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(180, 139, 255);
+}
+
+.sign-in {
+    color: white;
+}
+
+.btn {
+    padding: 8px 14px;
+}
+
+.navbar.nav-tog {
+    width: 30x;
+}
+
+.bg-dark {
+    background-color: #030c44 !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white;
+    border-radius: 0.25%;
+    outline: none;
+    box-shadow: none;
+}
+
+/*-----Hero------*/
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../images/banner.jpg);
+    background-size:cover;
+    border-radius: 0 0 10px 10px;
+    background-position: center;
+}
+
+
+.display-4 {
+    font-weight: 700;
+    color: white;
+}
+.right-text {
+    margin-top: 60px;
+}
+.download img {
+    width: 150px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.download img:hover {
+    transform: translateY(-10px);
+}
+
+.right-text h5,
+p {
+    color: white;
+    font-weight: 300;
+    
+}
+.right-text h5{
+    letter-spacing: 9px;
+}
+.iphone-img img {
+    margin-top: 20%;
+  animation: floatAnim 2s ease-in-out infinite;
+}
+@keyframes floatAnim {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+/* Media query for Android phones */
+@media only screen and (max-width: 480px) {
+    /* CSS styles specific to Android phones */
+    .right-text h5{
+       font-size: 10px;
+       text-align: center;
+       padding-top: 20px;
+    }
+    .display-4{
+        text-align: center;
+       padding-top: 15px;
+    }
+    .right-text p{
+        text-align: center;
+        font-size: 14px;
+    }
+    .download{
+        padding-left: 50px;
+    }
+    .download img{
+        width: 120px;
+    }
+    .right-text {
+        margin-top: -5px;  
+    }
+   
+  }
+ 
+  
+  /* Media query for iPhones */
+  @media only screen and (max-width: 375px) {
+    /* CSS styles specific to iPhones */
+  }
+  
+  /* Media query for tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS styles specific to tablets */
+    .display-4{
+        text-align: center;
+       padding-top: 15px;
+       font-size: 70px;
+    }
+    .right-text h5{
+        text-align: center;
+        padding-top: 20px;
+     }
+     .right-text p{
+        text-align: center;
+        font-size: 14px;
+    }
+    .download{
+        margin: 20px;
+        padding-left: 25%;
+    }  
+    .iphone-img img{
+     margin-top: -5px;
+    }
+  }
+  
+
+  
+/*-----service------*/
+#service {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+#service h6 {
+    color: #090979;
+}
+#service h5 {
+    color: var(---primary);
+    font-weight: 700;
+}
+.card-effect {
+    box-shadow: var(---box-shadow);
+    background-color: white;
+    padding: 25px;
+    transition: all 0.34s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.service p {
+    color: var(---dark);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    background: #d100ff;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.iconbox2 {
+    width: 54px;
+    height: 54px;
+    background: #090979;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.iconbox3 {
+    width: 54px;
+    height: 54px;
+    background: #f76504;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.iconbox4 {
+    width: 54px;
+    height: 54px;
+    background: #024034;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+
+
+/*-----Features------*/
+#features {
+    background-image: url(../images/cover\ copy.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 95%;
+    min-height: 50vh;
+    margin: 100px auto;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 2;
+}
+
+.col-img img {
+    border-radius: 6px;
+    border: rgb(8, 1, 15) 6px solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.right-features h2,
+h5 {
+    color: white;
+    font-weight: 300;
+}
+.right-features h5{
+    letter-spacing: 9px;
+}
+
+.right-features {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10%;
+}
+@media only screen and (max-width: 480px) {
+    /* CSS styles specific to Android phones */
+   .right-features{
+    margin-top: -50px;
+    text-align: center;
+    margin-left: -30px;
+   }
+   .learn-row{
+    margin-top: -10px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+   .right-features h5{
+    font-size: 13px;
+   }
+  }
+ 
+  
+  /* Media query for iPhones */
+  @media only screen and (max-width: 375px) {
+    /* CSS styles specific to iPhones */
+  }
+  
+  /* Media query for tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS styles specific to tablets */
+    .right-features{
+        margin-top: -50px;
+        text-align: center;
+        margin-left: -30px;
+       }
+  }
+
+
+
+
+
+/*-----Discovery------*/
+#discovery {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-bottom: 120px;
+    padding-top: 80px;
+}
+
+#discovery .best {
+    color: #090979;
+}
+
+#discovery h6 {
+    color: #888;
+    font-size: smaller;
+}
+
+.Best-cs {
+    position: relative;
+    border-radius: 10px;
+}
+.Best-cs h5 {
+    color: var(---primary);
+    font-weight: 700;
+}
+.Best-cs img {
+    width: 40px;
+    border-radius: 100px;
+}
+
+span {
+    position: absolute;
+    right: 5%;
+    top: 65%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sellers h6 {
+    padding-left: 12px;
+    padding-top: 13px;
+}
+
+.seller {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    background-color: #f7650463;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #ac4704;
+}
+
+.iconboxx {
+    width: 54px;
+    height: 54px;
+    background: #04d063;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.iconboxx2 {
+    width: 54px;
+    height: 54px;
+    background: #0b0351;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.iconboxx3 {
+    width: 54px;
+    height: 54px;
+    background: #51033a;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    flex: none
+}
+
+.price small {
+    margin-left: 5px;
+    color: #888;
+}
+
+.price p {
+    color: #037861;
+}
+
+.rates {
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+.rates img {
+    width: 18px;
+}
+
+.rates p {
+    color: #130f10;
+    font-size: 13px;
+    font-family: 700;
+}
+
+/*-----How it works------*/
+#Work {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.how-it-work h6 {
+    color: #047b63;
+}
+
+.how-it-work p {
+    color: #888;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #047b63;
+    color: white;
+}
+/*-----Testimonial------*/
+#Testimonial{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+#Testimonial h6{
+    color: #037861;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+#Testimonial p{
+  color: #888;
+}
+.testifier{
+    position: relative;
+}
+.good-mark{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.testi img{
+    width: 40px;
+    border-radius: 100px;
+}
+
+.rate-star p{
+   color: #130f10;
+   font-weight: 700;
+   font-size: 12px;
+   margin-top: 18px;
+   margin-left: 10px;
+}
+/*-----buttom hero------*/
+#buttom-hero{
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background-color: #030c44;
+    width: 90%;
+    min-height: 50vh;
+    border-radius: 10px;
+    position: relative;
+}
+.right-buttom{
+    margin-top: 30px;
+}
+.img-left{
+   padding-top: 50px;
+   padding-left: 0 auto; 
+   animation: floatAnim 3s ease-in-out infinite;  
+}
+.download1{
+    margin-bottom: 20px;
+}
+.download1 img {
+    width: 150px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.download1 img:hover {
+    transform: translateY(-10px);
+}
+/* Media query for Android phones */
+@media only screen and (max-width: 480px) {
+    /* CSS styles specific to Android phones */
+    .download1{
+        padding-left: 40px;
+    }
+    .download1 img{
+        width: 120px;
+    } 
+  }
+  /* Media query for tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS styles specific to tablets */
+    .right-buttom p{
+        text-align: center;
+    }
+    .download1{
+        padding-left: 25%;    
+    }
+  }
+
+
+/*-----Foooter section------*/
+.footer-top{
+    background-color: #030c44;
+    padding-bottom: 90px;
+    padding-top: 50px;
+}
+.footer-top a{
+  color: var(---body);
+}
+.footer-top a:hover{
+    color: white;
+  }
+.footer-bottom{
+    background-color: #242933;
+}
+.social-icons .bx{
+    font-size: 20px;
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #030c44;
+    transition: 0.5s ease;
+}
+.social-icons .bx:hover{
+   color: #ff00c8;
+}
+.img-footer img{
+    width: 60%;
+}
+.wrapper{
+    margin-top: 20px;
+}
+@media only screen and (max-width: 480px) {
+    /* CSS styles specific to Android phones */
+    .img-footer img{
+        width: 40%;
+    }
+  }
+  
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS styles specific to tablets */
+    .footer-top{
+        text-align: center;
+    }
+    .img-footer img{
+        width: 30%;
+    }
+  }
+  .scrollup{
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    opacity: .3;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #000;
+    z-index: 1000;
+    transition: opacity .5s, background-color .5s;
+    -moz-transition: opacity .5s, background-color .5s;
+    -webkit-transition: opacity .5s, background-color .5s;
+}
+
+.scrollup:hover {
+    background: var(---primary);
+    opacity: 1;
+}
+
+.scrollup i {
+    font-size: 13px;
+    position: absolute;
+    opacity: 1;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -6px;
+    text-decoration: none;
+
+}
